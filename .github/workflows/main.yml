@@ -1,4 +1,4 @@
-name: first work flow
+name: first workflow
 on:
   push:
     branches:
@@ -9,6 +9,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: print a welcome message
+      - name: Print a welcome message
         run: echo "Welcome to our First GitHub Action Workflow!"
+
+      - name: Checkout Repo
+        uses: actions/checkout@v5.0.0
+
+      - name: List Repo file
+        run: ls -alh
+     
     
